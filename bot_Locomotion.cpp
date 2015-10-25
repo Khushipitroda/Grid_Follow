@@ -171,18 +171,12 @@ bool locomotion()
 
 bool path(short row, short col)
 {
-	if ((row > gridR - 1) || (col > gridC - 1)) // Checks if not on bottom edge
+	if ((row > gridR - 1) || (col > gridC - 1)) // Checks if not on bottom edge or right edge
 		return false;
 
-	if ((col < 0) || (row < 0))  // Checks if not on left edge
+	if ((col < 0) || (row < 0))  // Checks if not on left edge or top edge
 		return false;
-
-	//if (col > gridC - 1) // Checks if not on right edge
-		//return false;
-
-	//if (row < 0) // Checks if not on top edge
-		//return false;
-
+		
 	if (correctPath[row][col] == 0 || wasHere[row][col])	// If you are on a wall or already were here
 		return false;
 
