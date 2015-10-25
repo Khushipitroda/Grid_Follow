@@ -7,9 +7,9 @@ So I have divided the Grid Follow to 3 different phases as,
 
 1. Grid scanning and saving to EEPROM. (scannig_grid.cpp)
 
-2. Find the shortest path using EEPROM data.
+2. Find the shortest path using EEPROM data. (shortest_path.cpp)
 
-3. Navigate through the shortest path.
+3. Navigate through the shortest path. (bot_Locomotion.cpp)
 
 Hope you will get a clear understanding after going through above code pieces.
 Happy coding.
