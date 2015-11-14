@@ -97,13 +97,6 @@ bool recursiveSolve(int row, int col) {
 	// If you are on a wall or already were here
 	wasHere[row][col] = true;
 
-	if (row != 0) // Checks if not on top edge
-		if (recursiveSolve(row - 1, col))
-		{
-			// Recalls method one to the top
-			correctPath[row][col] = true; // Sets that path value to true;
-			return true;
-		}
 	if (row != gridR - 1) // Checks if not on bottom edge
 		if (recursiveSolve(row + 1, col))
 		{
@@ -111,6 +104,7 @@ bool recursiveSolve(int row, int col) {
 			correctPath[row][col] = true;
 			return true;
 		}
+
 	if (col != 0)  // Checks if not on left edge
 		if (recursiveSolve(row, col - 1))
 		{
@@ -118,6 +112,16 @@ bool recursiveSolve(int row, int col) {
 			correctPath[row][col] = true;
 			return true;
 		}
+
+	if (row != 0) // Checks if not on top edge
+		if (recursiveSolve(row - 1, col))
+		{
+			// Recalls method one to the top
+			correctPath[row][col] = true; // Sets that path value to true;
+			return true;
+		}
+	
+	
 	if (col != gridC - 1) // Checks if not on right edge
 		if (recursiveSolve(row, col + 1))
 		{
