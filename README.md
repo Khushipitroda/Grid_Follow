@@ -12,7 +12,7 @@ So I have divided the Grid Follow to 3 different phases as,
 3. Navigate through the shortest path. (bot_Locomotion.cpp)
 
 Hope you will get a clear understanding after going through above code pieces.
-Happy coding.
+Happy coding.:)
 
 .
 
